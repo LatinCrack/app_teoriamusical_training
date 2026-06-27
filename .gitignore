@@ -1,0 +1,25 @@
+# Entorno aislado local
+flutter_sdk/
+.pub_cache/
+
+# Archivos específicos de Flutter (music_theory_app)
+music_theory_app/.dart_tool/
+music_theory_app/.flutter-plugins
+music_theory_app/.flutter-plugins-dependencies
+music_theory_app/.packages
+music_theory_app/build/
+
+# Configuración de editores e IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporales del sistema
+.DS_Store
+Thumbs.db
+log/
+*.log

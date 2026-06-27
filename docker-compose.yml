@@ -1,0 +1,10 @@
+services:
+  music-theory-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: music-theory-app:latest
+    container_name: music_theory_app_container
+    ports:
+      - "8080:80"
+    restart: always
