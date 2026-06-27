@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'core/navigation/app_router.dart';
 
 void main() {
@@ -20,7 +19,7 @@ class NoteQuizApp extends StatelessWidget {
           seedColor: Colors.deepPurpleAccent,
           brightness: Brightness.dark,
         ),
-        textTheme: GoogleFonts.outfitTextTheme(ThemeData.dark().textTheme),
+        textTheme: ThemeData.dark().textTheme.apply(fontFamily: 'Outfit'),
       ),
       initialRoute: '/',
       routes: AppRouter.routes,

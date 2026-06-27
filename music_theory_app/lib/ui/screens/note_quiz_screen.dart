@@ -52,8 +52,11 @@ class _NoteQuizScreenState extends State<NoteQuizScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           // 1. Selector de Clave y Banner de Score (Header del ejercicio)
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Wrap(
+            spacing: 12,
+            runSpacing: 12,
+            alignment: WrapAlignment.spaceBetween,
+            crossAxisAlignment: WrapCrossAlignment.center,
             children: [
               Container(
                 decoration: BoxDecoration(
@@ -63,10 +66,11 @@ class _NoteQuizScreenState extends State<NoteQuizScreen> {
                 ),
                 padding: const EdgeInsets.all(4),
                 child: Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    _buildClefButton(Clef.treble, 'Clave de Sol', state.currentClef),
+                    _buildClefButton(Clef.treble, 'Clave Sol', state.currentClef),
                     const SizedBox(width: 4),
-                    _buildClefButton(Clef.bass, 'Clave de Fa', state.currentClef),
+                    _buildClefButton(Clef.bass, 'Clave Fa', state.currentClef),
                   ],
                 ),
               ),
@@ -250,7 +254,7 @@ class _NoteQuizScreenState extends State<NoteQuizScreen> {
       onTap: () => _engine.selectClef(clef),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
-        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         decoration: BoxDecoration(
           color: isSelected ? Colors.deepPurpleAccent : Colors.transparent,
           borderRadius: BorderRadius.circular(14),

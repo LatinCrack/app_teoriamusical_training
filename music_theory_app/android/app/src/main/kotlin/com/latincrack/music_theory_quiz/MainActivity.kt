@@ -1,4 +1,4 @@
-package com.music.theory.music_theory_app
+package com.latincrack.music_theory_quiz
 
 import io.flutter.embedding.android.FlutterActivity
 
