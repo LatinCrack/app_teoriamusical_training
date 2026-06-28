@@ -251,7 +251,8 @@ class _NoteQuizScreenState extends State<NoteQuizScreen> {
   Widget _buildClefButton(Clef clef, String label, Clef activeClef) {
     final bool isSelected = clef == activeClef;
     return GestureDetector(
-      onTap: () => _engine.selectClef(clef),
+      behavior: HitTestBehavior.opaque,
+      onTapDown: (_) => _engine.selectClef(clef),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),

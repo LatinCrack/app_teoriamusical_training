@@ -34,13 +34,16 @@ class _PremiumButtonState extends State<PremiumButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTapDown: (_) => setState(() => _scale = 0.95),
+      behavior: HitTestBehavior.opaque,
+      onTapDown: (_) {
+        setState(() => _scale = 0.92);
+        widget.onPressed();
+      },
       onTapUp: (_) => setState(() => _scale = 1.0),
       onTapCancel: () => setState(() => _scale = 1.0),
-      onTap: widget.onPressed,
       child: AnimatedScale(
         scale: _scale,
-        duration: const Duration(milliseconds: 100),
+        duration: const Duration(milliseconds: 60),
         curve: Curves.easeOut,
         child: Container(
           width: widget.width,
