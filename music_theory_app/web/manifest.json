@@ -1,12 +1,12 @@
 {
-    "name": "music_theory_app",
-    "short_name": "music_theory_app",
+    "name": "Teoría Musical Quiz",
+    "short_name": "Teoría Musical",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
+    "background_color": "#0F0F11",
+    "theme_color": "#6C63FF",
+    "description": "Plataforma interactiva premium para el aprendizaje de teoría musical.",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {
