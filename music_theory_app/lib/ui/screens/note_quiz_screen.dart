@@ -176,11 +176,14 @@ class _NoteQuizScreenState extends State<NoteQuizScreen> {
           ),
           const SizedBox(height: 32),
 
-          // 4. Botones de Selección / Siguiente
-          AnimatedSwitcher(
-            duration: const Duration(milliseconds: 250),
-            transitionBuilder: FadeScaleTransitionBuilder.build,
-            child: state.feedbackStatus == 'idle'
+          // 4. Botones de Selección / Siguiente (Con tamaño animado para evitar saltos de layout)
+          AnimatedSize(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 250),
+              transitionBuilder: FadeScaleTransitionBuilder.build,
+              child: state.feedbackStatus == 'idle'
                 ? LayoutBuilder(
                     key: const ValueKey('options'),
                     builder: (context, constraints) {
@@ -241,6 +244,7 @@ class _NoteQuizScreenState extends State<NoteQuizScreen> {
                       ),
                     ),
                   ),
+          ),
           ),
           const SizedBox(height: 24),
         ],
